@@ -6,7 +6,17 @@ const SALT_ROUNDS = 11;
 
 const UserSchema = Schema({
   // create your user schema here.
+  username: {
+    type: String, 
+    required: true, 
+    unique: true,
+    lowercase: true,
+  },
   // username: required, unique and lowercase
+  password: {
+    type: String,
+    required: true,
+  }
   // password: required
 });
 
